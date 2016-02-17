@@ -34,6 +34,10 @@ gem 'gmaps4rails'
 gem 'soda-ruby', :require => 'soda'
 gem 'hashie'
 
+gem 'soda-ruby', :require => 'soda'
+
+gem 'hashie'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'tests#index'
+
+  root 'test#index'
+
 end
