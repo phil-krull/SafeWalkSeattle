@@ -19,22 +19,29 @@
   </head>
 
   <body>
+    <% if session[:locations] %>
+    <p>Got it</p>
+    	<% session[:locations].each do |s| %>
+    	<p><%= s %></p>
+    	    <% end %>	
+
+    <% end %>	
     <div id="locationField">
 	    <form action = '/directions' method = 'post'>
+	    	<input type = 'hidden' name = 'authenticity_token' value = '<%= form_authenticity_token %>'
 	    	<label>Start</label>
 	    	<br>
-		    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+		    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" name ='start_address'></input>
 		    <br>
 		    <br>
 		    <label>End</label>
-		    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+		    <input id="test" placeholder="Enter your address" onFocus="geolocate()" type="text" name = 'end_address'></input>
 		    <br>
 		    <input type = 'submit' value = "Go!" />
 
 		</form>
     </div>
 
-    
 
 <script>
 // This example displays an address form, using the autocomplete feature
@@ -59,6 +66,11 @@ function initAutocomplete() {
   // location types.
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+
+      {types: ['geocode']});
+    autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */(document.getElementById('test')),
+
       {types: ['geocode']});
 
   // When the user selects an address from the dropdown, populate the address
