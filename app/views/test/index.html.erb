@@ -25,7 +25,8 @@
     var map = new google.maps.Map(document.getElementById("map"),mapProp);
 
     var startMark = new google.maps.Marker({
-      position: myLatLng
+      position: myLatLng,
+      icon: 'pin.png'
     });
 
 //----------------------- add a listener to map point --------------------
@@ -174,6 +175,8 @@
       if (status === google.maps.DirectionsStatus.OK) {
 
 //------------------------- the below code is for finding each change of direction allow a path-----------------------
+//http://www.mapquestapi.com/common/encodedecode.html
+
         // console.log(response.routes[0].legs[0].steps)
         // for(var i = 0; i < response.routes[0].legs[0].steps.length; i++) {
         //   console.log(response.routes[0].legs[0].steps[i].encoded_lat_lngs);
