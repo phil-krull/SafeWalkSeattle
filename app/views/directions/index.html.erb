@@ -28,7 +28,8 @@
         <div id='StartEndForm'></div>
 
 
-          <form role='form' class="form-horizontal" method='post'>
+          <form role='form' class="form-horizontal" method='post' action='/directions'>
+            <input type='hidden' name='authenticity_token' value="<%= form_authenticity_token %>">
 
             <div class='form-group'>
               <label class="control-label col-sm-4" for="email"><span class='green'>Start</span></label>
