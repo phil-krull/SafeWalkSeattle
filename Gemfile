@@ -31,16 +31,16 @@ gem 'hirb'
 gem 'rails-footnotes'
 
 gem 'gmaps4rails'
-
 gem 'soda-ruby', :require => 'soda'
-
 gem 'hashie'
+
 
 gem 'bootstrap-sass'
 
 
 
 gem 'autoprefixer-rails'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

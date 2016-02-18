@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src = " https://data.seattle.gov/resource/y7pv-r3kh.json"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFKDN5CZiPsOBMy4p-TmiuLdI4lX1VWG0&libraries=places">
+	<script src = "https://data.seattle.gov/resource/y7pv-r3kh.json"></script>
   <title>SafeWalkSeattle</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 	<h2>Hello</h2>
 
 <%= yield %>
 
+<div id = 'test'>
+</div>
 </body>
 </html>

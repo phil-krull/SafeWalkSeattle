@@ -1,1 +1,18 @@
-<h1>test!!!!</h1>
+
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+<%= @all.group_by {|i| puts i.methods} %>
+
+
+
+<p><%= @data.count %></p>
+<%= @data.each do |d| %>
+
+
+<p><%= d.offense_type %></p>
+<p><%= d.latitude %></p>
+<p><%= d.longitude %></p>
+<p><%= d.date_reported%></p>
+
+<% end %>
+
