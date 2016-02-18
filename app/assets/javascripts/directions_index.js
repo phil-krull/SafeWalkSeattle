@@ -1,62 +1,3 @@
-
-
-
-<html>
-  <head>
-    <title>Place Autocomplete Address Form</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-
-    <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/directionsstyles.css">
-
-
-  <%= stylesheet_link_tag "directionsstyles" %>
-
-
-    
-  </head>
-
-  <body>
-
-    <div class='container'>
-      
-      
-        <div id='StartEndForm'></div>
-
-
-          <form role='form' class="form-horizontal" method='post'>
-
-            <div class='form-group'>
-              <label class="control-label col-sm-4" for="email"><span class='green'>Start</span></label>
-              <div class="col-sm-4">
-                <input class="form-control" id="autocomplete" placeholder="Starting Address" onFocus='geolocate()'>
-              </div>
-            </div>
-
-            <div class='form-group'>
-              <label class="control-label col-sm-4" for="end"><span class='Red'>End</span></label>
-              <div class="col-sm-4">
-                <input class="form-control" id="autocomplete" placeholder="Ending Address" onFocus='geolocate()'>
-              </div>
-            </div>
-
-            <div class='form-group'>
-              <div class="col-sm-offset-5 col-sm-2">
-                <button type="submit" class="btn btn-success btn-block" >GO!</button>
-              </div>
-            </div>
-          </form>
-    </div> <!-- ends  StartEndForm-->
-  </div> <!-- ends container -->
-
-
-
-
-
-    
-
 <script>
 // This example displays an address form, using the autocomplete feature
 // of the Google Places API to help users fill in the information.
@@ -132,5 +73,3 @@ function geolocate() {
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFKDN5CZiPsOBMy4p-TmiuLdI4lX1VWG0&signed_in=true&libraries=places&callback=initAutocomplete"
         async defer></script>
-  </body>
-</html>
