@@ -1,15 +1,4 @@
-<h1>Word</h1>
-<!-- <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div> -->
-    <input id="origin-input" class="controls" type="text"
-        placeholder="Enter an origin location">
 
-    <input id="destination-input" class="controls" type="text"
-        placeholder="Enter a destination location">
-
-<div id="map" style="width:800px;height:800px;"></div>
-<script>
   function initialize() {
     var bounds = new google.maps.LatLngBounds();
     var markers = [[47.6000, -122.3329, 'Location here'],[47.6094, -122.3335, 'Location there']];
@@ -222,8 +211,8 @@
 
     //this line calls the initialize function upon page load
   google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-<script>
+
+
 //   handler = Gmaps.build('Google');
 //   handler.buildMap({ provider: {}, internal: {id: 'map2'}}, function(){
 
@@ -243,4 +232,4 @@
 //     handler.bounds.extendWith(markers);
 //     handler.fitMapToBounds();
 //   });
-// </script>
+// <>

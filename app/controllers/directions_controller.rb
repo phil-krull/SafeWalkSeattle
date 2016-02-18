@@ -8,6 +8,7 @@ require 'openssl'
 	def create_directions
 		@response = []
 		@address = [params[:start_address], params[:end_address]]
+		session[:address] = @address
 		@address.each do |addr|
 
 			uri = URI.parse("https://maps.googleapis.com/maps/api/geocode/json?address=" + addr + "&key=AIzaSyAFKDN5CZiPsOBMy4p-TmiuLdI4lX1VWG0")
@@ -26,6 +27,7 @@ require 'openssl'
 		end
 
 		get_map_directions(@location)
+
 	end
 
 	def get_map_directions location			
@@ -60,4 +62,5 @@ require 'openssl'
   	
   		render :json => @test
 	end
+	redirect_to 'test/index'
 end

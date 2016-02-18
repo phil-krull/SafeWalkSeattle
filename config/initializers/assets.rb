@@ -6,6 +6,8 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( directionsstyles.css )
 
 Rails.application.config.assets.precompile += %w( directions_index.js )
+Rails.application.config.assets.precompile += %w( text_index.js )
+Rails.application.config.assets.precompile += %w( textstyles.css )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
