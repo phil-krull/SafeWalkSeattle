@@ -33,6 +33,7 @@ gem 'rails-footnotes'
 gem 'gmaps4rails'
 gem 'soda-ruby', :require => 'soda'
 gem 'hashie'
+gem 'http'
 
 
 gem 'bootstrap-sass'

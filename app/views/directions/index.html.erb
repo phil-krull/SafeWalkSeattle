@@ -20,6 +20,7 @@
 
   <body>
 
+
     <div class='container'>
       
       
@@ -38,7 +39,7 @@
             <div class='form-group'>
               <label class="control-label col-sm-4" for="end"><span class='Red'>End</span></label>
               <div class="col-sm-4">
-                <input class="form-control" id="autocomplete" placeholder="Ending Address" onFocus='geolocate()'>
+                <input class="form-control" id="test" placeholder="Ending Address" onFocus='geolocate()'>
               </div>
             </div>
 
@@ -55,7 +56,6 @@
 
 
 
-    
 
 <script>
 // This example displays an address form, using the autocomplete feature
@@ -80,6 +80,11 @@ function initAutocomplete() {
   // location types.
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+
+      {types: ['geocode']});
+    autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */(document.getElementById('test')),
+
       {types: ['geocode']});
 
   // When the user selects an address from the dropdown, populate the address
