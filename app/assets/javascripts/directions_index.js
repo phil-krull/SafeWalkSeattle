@@ -1,4 +1,4 @@
-<script>
+
 // This example displays an address form, using the autocomplete feature
 // of the Google Places API to help users fill in the information.
 
@@ -19,8 +19,15 @@ var componentForm = {
 function initAutocomplete() {
   // Create the autocomplete object, restricting the search to geographical
   // location types.
+  
+
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+
+      {types: ['geocode']});
+    autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */(document.getElementById('test')),
+
       {types: ['geocode']});
 
   // When the user selects an address from the dropdown, populate the address
@@ -69,7 +76,3 @@ function geolocate() {
   }
 }
 // [END region_geolocation]
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFKDN5CZiPsOBMy4p-TmiuLdI4lX1VWG0&signed_in=true&libraries=places&callback=initAutocomplete"
-        async defer></script>
