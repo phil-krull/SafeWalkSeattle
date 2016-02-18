@@ -19,15 +19,45 @@ require 'openssl'
 			@response << result
 			
 		end
-		# session[:locations] = @response
-		session[:locations] = []
+		@location = []
 		@response.each do |r|
-			session[:locations]<< r["results"][0]["geometry"]["location"]["lat"]
-			session[:locations]<< r["results"][0]["geometry"]["location"]["lng"]
+			@location << r["results"][0]["geometry"]["location"]["lat"]
+			@location << r["results"][0]["geometry"]["location"]["lng"]
 		end
-	
+
+		get_map_directions(@location)
 	end
 
-	def create_place
+	def get_map_directions location			
+		@response = []
+
+		for i in 1..2 do 
+			if i == 1
+				lat = location[0]
+				long = location [1]
+			else 
+				lat = location[2]
+				long = location[3]
+			end
+			client = SODA::Client.new({:domain => "data.seattle.gov", :app_token => "FPAUb8hq9VkrOUpKXiqAHvi5B"})
+
+	  		data = client.get("y7pv-r3kh", {"$limit" => "1000", "$order" => "date_reported DESC", "$where" => "within_circle(location, " + lat.to_s + "," + long.to_s + "," + " 150) AND offense_type IN('HARASSMENT', 'ASSLT-AGG-GUN', 'ASSLT-NON-AGG', 'ROBBERY-BUSINESS-WEAPON','ASSLT-AGG-BODYFORCE','ROBBERY-STREET-BODYFORCE','ROBBERY-STREET-WEAPON') AND year > 2014"})
+
+	  		@response << data
+
+  		end
+  		@results = Hash.new
+  		@test = []
+  		@response.each do |r|
+  			r.each do |s|
+  				@results["offense"] = s.summarized_offense_description
+  				@results["location"] = s.location.coordinates
+  				puts s.summarized_offense_description
+  				@test.push(@results)
+  			end
+  		end
+
+  	
+  		render :json => @test
 	end
 end
