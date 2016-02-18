@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root 'tests#index'
+
+  root 'directions#index'
+  post '/directions' => 'directions#create_directions'
+
+
 end
