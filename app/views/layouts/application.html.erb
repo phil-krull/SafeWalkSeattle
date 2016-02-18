@@ -2,13 +2,15 @@
 <html>
 <head>
 	<script src = " https://data.seattle.gov/resource/y7pv-r3kh.json"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFKDN5CZiPsOBMy4p-TmiuLdI4lX1VWG0&libraries=places"></script>
+  <script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
+  </body>
   <title>SafeWalkSeattle</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h2>Hello</h2>
 
 <%= yield %>
 

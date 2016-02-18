@@ -32,6 +32,8 @@ gem 'rails-footnotes'
 
 gem 'gmaps4rails'
 
+gem 'underscore-rails'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
