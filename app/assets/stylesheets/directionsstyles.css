@@ -16,8 +16,11 @@ form{
 	margin-bottom: 10%;
 	margin-right: auto;
 	margin-left: auto;
-	color: rgb(92,184,92);
+	
 }
-.end{
+.red{
 	color: rgb(217,83,79);
+}
+.green{
+	color:rgb(92,184,92);
 }
