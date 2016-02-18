@@ -34,9 +34,13 @@ gem 'gmaps4rails'
 gem 'soda-ruby', :require => 'soda'
 gem 'hashie'
 
-gem 'soda-ruby', :require => 'soda'
+gem 'chartkick'
+gem 'bootstrap-sass', '~> 3.3.6'
+# gem 'sass-rails', '>= 3.2'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-gem 'hashie'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

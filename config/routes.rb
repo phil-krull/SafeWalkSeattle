@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'test#index'
+  root 'directions#index'
+
 
 end
