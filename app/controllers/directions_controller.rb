@@ -48,19 +48,26 @@ require 'openssl'
 	  		@response << data
 
   		end
-  		@results = Hash.new
   		@test = []
   		@response.each do |r|
+  			
   			r.each do |s|
+		  		@results = Hash.new
+  				# puts @test
   				@results["offense"] = s.summarized_offense_description
   				@results["location"] = s.location.coordinates
-  				puts s.summarized_offense_description
-  				@test.push(@results)
+  				@test << @results
   			end
-  		end
 
+  		end
+  		puts @results
   	
   		render :json => @test
+  		if @test.length > 10
+  			session[:danger_level] = "Not Safe, get outta there!"
+  		else
+  			session[:danger_level] = "You're pretty safe, man"
+  		end
 	end
 	redirect_to 'test/index'
 end
